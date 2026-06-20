@@ -1,0 +1,43 @@
+================================================
+       SRE TOOLKIT — System Health Check
+================================================
+Date/Time  : 2026-06-20 22:37:25
+Hostname   : Macbook-Pro
+Uptime     : 22:37  up 3 days, 12:09, 1 user, load averages: 2.74 2.16 2.14
+------------------------------------------------
+Disk (/)   : 4%
+Memory     : 3880
+CPU        : CPU usage: 5.10% user, 13.11% sys, 81.78% idle 
+------------------------------------------------
+TOP 3 PROCESSES BY CPU:
+PID %CPU COMMAND
+853 3.1 /Applications/Google
+18515 1.9 /Applications/Visual
+STATUS     : All checks passed
+================================================
+================================================
+       SRE TOOLKIT — Log Parser
+================================================
+Log file       : /Users/mac/sre-toolkit/linux/sample.log
+Analysed       : 2026-06-20 22:37:26
+------------------------------------------------
+Total count    :        8
+ERROR count    : 3
+WARNING count  : 2
+INFO count     : 3
+------------------------------------------------
+LAST 5 ERRORS:
+2026-06-12 07:10:45 ERROR Database connection timeout
+2026-06-12 07:20:11 ERROR Null pointer exception in handler
+2026-06-12 07:35:44 ERROR Service unavailable
+------------------------------------------------
+STATUS         : ⚠ Errors detected — review required
+================================================
+================================================
+       SRE TOOLKIT — Disk Alert Check
+================================================
+CHECKED   : 2026-06-20 22:37:26
+Threshold : 80%
+DISK (/)  : 4%
+================================================
+STATUS    :  Disk usage within safe limits

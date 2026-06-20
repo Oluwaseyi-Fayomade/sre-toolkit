@@ -1,0 +1,43 @@
+================================================
+       SRE TOOLKIT — System Health Check
+================================================
+Date/Time  : 2026-06-20 22:39:24
+Hostname   : Macbook-Pro
+Uptime     : 22:39  up 3 days, 12:11, 1 user, load averages: 2.06 2.05 2.09
+------------------------------------------------
+Disk (/)   : 4%
+Memory     : 4343
+CPU        : CPU usage: 2.81% user, 12.21% sys, 84.96% idle 
+------------------------------------------------
+TOP 3 PROCESSES BY CPU:
+1120 2.4 /Applications/WhatsApp.app/Contents/MacOS/WhatsApp
+133 2.1 /usr/libexec/opendirectoryd
+18515 1.8 /Applications/Visual
+STATUS     : All checks passed
+================================================
+================================================
+       SRE TOOLKIT — Log Parser
+================================================
+Log file       : /Users/mac/sre-toolkit/linux/sample.log
+Analysed       : 2026-06-20 22:39:25
+------------------------------------------------
+Total count    :        8
+ERROR count    : 3
+WARNING count  : 2
+INFO count     : 3
+------------------------------------------------
+LAST 5 ERRORS:
+2026-06-12 07:10:45 ERROR Database connection timeout
+2026-06-12 07:20:11 ERROR Null pointer exception in handler
+2026-06-12 07:35:44 ERROR Service unavailable
+------------------------------------------------
+STATUS         : ⚠ Errors detected — review required
+================================================
+================================================
+       SRE TOOLKIT — Disk Alert Check
+================================================
+CHECKED   : 2026-06-20 22:39:25
+Threshold : 80%
+DISK (/)  : 4%
+================================================
+STATUS    :  Disk usage within safe limits
