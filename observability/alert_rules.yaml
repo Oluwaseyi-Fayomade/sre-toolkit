@@ -1,0 +1,27 @@
+groups:
+  - name: sre-toolkit-alerts
+    rules:
+      - alert: HighDiskUsage
+        expr: disk_usage_percent > 80
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Disk usage above 80%"
+          description: "Disk usage has exceeded 80% for more than 5 minutes."
+      - alert: PodNotRunning
+        expr: kube_pod_status_phase != "Running"
+        for: 2m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Pod is down"
+          description: "Pod has not been in Running state for over 2 minutes, indicating the service is likely unavailable."
+      - alert: HighPodRestarts
+        expr: pod_restart_count > 3
+        for: 2m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Pod restarting frequently"
+          description: "Pod has restarted more than 3 times, suggesting an underlying stability issue such as a crash loop or misconfiguration."
