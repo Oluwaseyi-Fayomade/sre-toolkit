@@ -24,8 +24,8 @@ echo "LAST 5 ERRORS:"
 echo "$LAST_ERRORS"
 echo "------------------------------------------------"
 if [ $ERROR -gt 0 ]; then
-echo "STATUS         : ⚠ Errors detected — review required"
+echo "STATUS         : Errors detected — review required"
 else
-    echo "STATUS         : ✓ All checks passed"
+    echo "STATUS         : All checks passed"
 fi
 echo "================================================"
