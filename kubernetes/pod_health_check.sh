@@ -18,10 +18,10 @@ echo "$PODS"
 echo "------------------------------------------------"
 
 if [ $TOTAL_PODS -eq 0 ]; then
-    echo "STATUS    : ⚠ NO PODS FOUND in namespace '$NAMESPACE'"
+    echo "STATUS    : NO PODS FOUND in namespace '$NAMESPACE'"
 elif [ $NOT_RUNNING -gt 0 ]; then
-    echo "STATUS    : ⚠ ALERT — $NOT_RUNNING pod(s) not running"
+    echo "STATUS    : ALERT — $NOT_RUNNING pod(s) not running"
 else
-    echo "STATUS    : ✓ All pods healthy"
+    echo "STATUS    : All pods healthy"
 fi
 echo "================================================"
