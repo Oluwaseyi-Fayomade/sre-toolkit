@@ -1,0 +1,48 @@
+name: SRE Toolkit CI
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  lint-bash:
+    name: Lint Bash Scripts
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Install shellcheck
+        run: sudo apt-get install -y shellcheck
+
+      - name: Run shellcheck on all scripts
+        run: |
+          shellcheck linux/health_check.sh
+          shellcheck linux/log_parser.sh
+          shellcheck linux/disk_alert.sh
+          shellcheck linux/run_all_checks.sh
+          shellcheck linux/port_check.sh
+          shellcheck kubernetes/pod_health_check.sh
+          shellcheck kubernetes/restart_detector.sh
+          shellcheck kubernetes/resource_report.sh
+
+  validate-terraform:
+    name: Validate Terraform
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v3
+
+      - name: Terraform Init
+        run: terraform init
+        working-directory: terraform
+
+      - name: Terraform Validate
+        run: terraform validate
+        working-directory: terraform
