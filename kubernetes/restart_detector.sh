@@ -20,7 +20,7 @@ echo "$PODS"
 echo "------------------------------------------------"
 if [ -z "$MAX_RESTARTS" ]; then
     echo "STATUS    : NO PODS FOUND in namespace '$NAMESPACE'"
-elif [ $MAX_RESTARTS -gt $THRESHOLD ]; then
+elif [ "$MAX_RESTARTS" -gt "$THRESHOLD" ]; then
     echo "STATUS    : ALERT — pod(s) exceeding $THRESHOLD restarts (max: $MAX_RESTARTS)"
 else
     echo "STATUS    : No pods exceeding restart threshold"
