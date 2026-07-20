@@ -14,13 +14,13 @@ echo "Started    : $STARTED"
 
 echo "------------------------------------------------"
 echo "Running health_check.sh..." 
-bash ~/sre-toolkit/linux/health_check.sh >> $REPORT_FILE
+bash ~/sre-toolkit/linux/health_check.sh >> "$REPORT_FILE"
 
 echo "Running log_parser.sh..."
-bash ~/sre-toolkit/linux/log_parser.sh >> $REPORT_FILE
+bash ~/sre-toolkit/linux/log_parser.sh >> "$REPORT_FILE"
 
 echo "Running disk_alert.sh..."
-bash ~/sre-toolkit/linux/disk_alert.sh >> $REPORT_FILE
+bash ~/sre-toolkit/linux/disk_alert.sh >> "$REPORT_FILE"
 echo "------------------------------------------------"
 echo "Report saved to: $REPORT_FILE"
 echo "================================================"
